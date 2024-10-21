@@ -1,0 +1,41 @@
+#include<stdio.h>
+void main()
+{
+    int a[5],n,pos,k,i;
+    printf("enter the limit: ");
+    scanf("%d",&n);
+    printf("enter %d elements: ",n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+        printf("the elements are: ",a[i]);
+        for(i=0;i<n;i++)
+    {
+        printf("%d \t",a[i]);
+    }
+printf("\n enter the number to be inserted: ");
+scanf("%d",&k);
+printf("\n enter the position: ");
+scanf("%d",&pos);
+if(pos<0 || pos>n)
+{
+    printf("invalid output");
+}
+else
+{
+for(i = n; i > pos;i--)
+{
+    a[i] = a[i - 1];
+}
+a[pos] = k;
+n++;
+printf("Array after insertion: ");
+for(i = 0; i < n; i++)
+{
+    printf("%d ", a[i]);
+}
+printf("\n");
+return 0;
+}
+}
